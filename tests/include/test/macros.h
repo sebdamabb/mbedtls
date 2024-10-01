@@ -126,8 +126,8 @@
         TEST_ASSERT( ( pointer ) == NULL );                       \
         if( ( length ) != 0 )                                     \
         {                                                         \
-            ( pointer ) = mbedtls_calloc( sizeof( *( pointer ) ), \
-                                          ( length ) );           \
+            ( pointer ) = mbedtls_calloc( ( length ), \
+                                        sizeof( *( pointer ) )); \
             TEST_ASSERT( ( pointer ) != NULL );                   \
         }                                                         \
     }                                                             \
@@ -144,8 +144,8 @@
         TEST_ASSERT( ( pointer ) == NULL );                       \
         if( ( length ) != 0 )                                     \
         {                                                         \
-            ( pointer ) = mbedtls_calloc( sizeof( *( pointer ) ), \
-                                          ( length ) );           \
+            ( pointer ) = mbedtls_calloc( ( length ), \
+                                        sizeof( *( pointer ) )); \
             TEST_ASSUME( ( pointer ) != NULL );                   \
         }                                                         \
     }                                                             \
